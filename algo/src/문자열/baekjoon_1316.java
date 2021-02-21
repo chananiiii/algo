@@ -1,4 +1,4 @@
-package algo;
+package ¹®ÀÚ¿­;
 import java.util.*;
 import java.io.*;
 public class baekjoon_1316 {
