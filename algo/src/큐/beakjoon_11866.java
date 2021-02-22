@@ -1,4 +1,4 @@
-package 문자열;
+package 큐;
 
 import java.util.*;
 import java.io.*;
