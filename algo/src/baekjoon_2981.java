@@ -9,6 +9,7 @@ public class baekjoon_2981 {
 		
 		ArrayList <Integer> arrayList = new ArrayList<Integer>();
 		ArrayList <Integer> result = new ArrayList<Integer>();
+		ArrayList <Integer> arrayListAfter = new ArrayList<Integer>();
 		
 		for(int i = 0; i < num; i ++) {
 			arrayList.add(Integer.parseInt(br.readLine()));
@@ -16,19 +17,14 @@ public class baekjoon_2981 {
 	
 		Collections.sort(arrayList);
 		
-		for(int i = 0; i < arrayList.get(0); i ++){
-			int temp = share(arrayList.get(1) - i, arrayList.get(0) - i);
-			boolean check = true;
-			for(int j = 2; j < arrayList.size(); j ++) {
-				if(temp != share(arrayList.get(j) - i, arrayList.get(0) - i)) {
-					check = false;
-					break;
-				}
-			}
-
-			if(check && !result.contains(temp)) {
-				result.add(temp);
-			}
+		int gcd = arrayList.get(1) - arrayList.get(0);
+		
+		for(int i = 2; i < arrayList.size(); i ++)
+			gcd = share(gcd, arrayList.get(i) - arrayList.get(i - 1));
+		
+		for(int i = 2; i <= gcd; i ++) {
+			if(gcd % i == 0)
+				result.add(i);
 		}
 		
 		Collections.sort(result);
