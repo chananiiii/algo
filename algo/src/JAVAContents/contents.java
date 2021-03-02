@@ -160,4 +160,22 @@ Collections.sort(array, new Comparator<String>() {
 		return a.length() - b.length();
 	}
 });
+
+-------------------------------------------------------------------------------------------
+
+■ 수학 관련
+★ 최대 공약수 - 유클리드 호제법
+int solve(int a, int b) {
+	// a > b 전제
+	if(a % b == 0) return b;
+	else return solve(b, a % b)
+}
+
+★ 에라토스테네스의 체 - 소수 구하는 알고리즘
+10 -> (int) Math.floor(sqrt(10)) 까지
+   -> 2 : 4, 6, 8 지움
+   -> 3 : 6, 9 지움
+   -> 4 : 이미 지웠기 때문에 넘어감.
+   -> 5 : 10 지움
+: 안지워진게 소수이다.
 */

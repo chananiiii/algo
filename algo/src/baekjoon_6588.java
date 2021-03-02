@@ -59,8 +59,7 @@ public class baekjoon_6588 {
 			int a = i;
 			int b = temp - i;
 			
-			if(primeArray[a] == 0 && a % 2 != 0 
-					&& primeArray[b] == 0 && b % 2 !=0) {
+			if(primeArray[a] == 0 && a % 2 != 0 && primeArray[b] == 0 && b % 2 !=0) {
 				bw.write(temp + " = " + a + " + " + b + "\n");
 				boo = true;
 				break;
