@@ -135,6 +135,21 @@ for(int i = 0; i < temp.length; i ++) {
 	String a = temp.substring(i, i + 1);
 }
 
+★제곱근 반올림, 내림, 올림
+//제곱근
+double temp = Math.sqrt(13);
+
+//반올림
+// 첫째 자리까지, 둘째자리까지, 셋째자리까지
+double pie = 3.1415926535;
+int round = Math.round(pie);
+int round = Math.round((pie * 10) / 10.0);
+int round = Math.round((pie * 100) / 100.0);
+
+//버림, 올림
+int num = (int)Math.floor(13.5);
+int num = (int)Math.ceil(13.5);
+
 ★Sort함수(length를 기준으로 정렬하고, compareTo를 통해서 문자열 순으로 정렬한다.)
 Collections.sort(array, new Comparator<String>() {
 	@Override
