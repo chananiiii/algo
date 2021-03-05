@@ -2,26 +2,6 @@ package BFS;
 import java.util.*;
 import java.io.*;
 
-class Pair {
-	private int y;
-	private int x;
-	Pair(int y, int x) {
-		this.y = y;
-		this.x = x;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return this.y;
-	}
-	public int getX() {
-		return this.x;
-	}
-}
 
 public class baekjoon_9205 {
 	public static Deque <Integer> deque = null;
