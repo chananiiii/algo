@@ -178,4 +178,19 @@ int solve(int a, int b) {
    -> 4 : 이미 지웠기 때문에 넘어감.
    -> 5 : 10 지움
 : 안지워진게 소수이다.
+
+★ 조합 알고리즘
+public static void combination(int [][] map, int start, int n, int r) throws IOException {
+	if(r == 0) {
+		bfs(copy(map, check));
+		//picture(map, check);
+	}
+	else {
+		for(int i = start; i < n; i ++) {
+			check[i] = 1;
+			combination(map, i + 1, n, r - 1);
+			check[i] = 0;
+		}
+	}
+}
 */
