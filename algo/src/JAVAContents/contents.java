@@ -135,6 +135,21 @@ for(int i = 0; i < temp.length; i ++) {
 	String a = temp.substring(i, i + 1);
 }
 
+★제곱근 반올림, 내림, 올림
+//제곱근
+double temp = Math.sqrt(13);
+
+//반올림
+// 첫째 자리까지, 둘째자리까지, 셋째자리까지
+double pie = 3.1415926535;
+int round = Math.round(pie);
+int round = Math.round((pie * 10) / 10.0);
+int round = Math.round((pie * 100) / 100.0);
+
+//버림, 올림
+int num = (int)Math.floor(13.5);
+int num = (int)Math.ceil(13.5);
+
 ★Sort함수(length를 기준으로 정렬하고, compareTo를 통해서 문자열 순으로 정렬한다.)
 Collections.sort(array, new Comparator<String>() {
 	@Override
@@ -145,4 +160,37 @@ Collections.sort(array, new Comparator<String>() {
 		return a.length() - b.length();
 	}
 });
+
+-------------------------------------------------------------------------------------------
+
+■ 수학 관련
+★ 최대 공약수 - 유클리드 호제법
+int solve(int a, int b) {
+	// a > b 전제
+	if(a % b == 0) return b;
+	else return solve(b, a % b)
+}
+
+★ 에라토스테네스의 체 - 소수 구하는 알고리즘
+10 -> (int) Math.floor(sqrt(10)) 까지
+   -> 2 : 4, 6, 8 지움
+   -> 3 : 6, 9 지움
+   -> 4 : 이미 지웠기 때문에 넘어감.
+   -> 5 : 10 지움
+: 안지워진게 소수이다.
+
+★ 조합 알고리즘
+public static void combination(int [][] map, int start, int n, int r) throws IOException {
+	if(r == 0) {
+		bfs(copy(map, check));
+		//picture(map, check);
+	}
+	else {
+		for(int i = start; i < n; i ++) {
+			check[i] = 1;
+			combination(map, i + 1, n, r - 1);
+			check[i] = 0;
+		}
+	}
+}
 */
