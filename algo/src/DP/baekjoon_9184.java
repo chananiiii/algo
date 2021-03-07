@@ -26,7 +26,7 @@ public class baekjoon_9184 {
 			if(a < 0) {
 				a = 0;
 			}
-			if(b < 0) {
+			if(b < 0) { 
 				b = 0;
 			}
 			if(c < 0) {
