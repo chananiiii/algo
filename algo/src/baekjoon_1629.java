@@ -12,7 +12,7 @@ public class baekjoon_1629 {
 		
 		long result = divide(A % C, B, C);
 		bw.write(result + "\n");
-		bw.flush();
+		bw.flush(); 
 		bw.close();
 	}
 	public static long divide(long a, long b, long c) {

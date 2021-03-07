@@ -182,7 +182,7 @@ public class baekjoon_17836 {
 			if(time > T)
 				continue;
 
-			if (sword) {
+			if (sword) { 
 				// »ó
 				if (y - 1 > -1 && check2[y - 1][x] >= time + 1 && time + 1 <= T) {
 					check2[y - 1][x] = time + 1;
