@@ -1,5 +1,19 @@
 package JAVAContents;
 /*
+■ BFS
+private static final int[] dx = {0, 0, -1, 1};
+private static final int[] dy = {-1, 1, 0, 0};
+for(int i = 0; i < 4; i ++) {
+	int ny = y + dy[i];
+	int nx = x + dy[i];
+	
+	if(ny < 0 || ny >= N || nx < 0 || nx >= N) {
+		continue;
+	}
+}
+ 
+
+
 ■ 클래스, 생성자
 class Pair() {
 	int sero;
@@ -26,7 +40,7 @@ String a = br.readLine();
 String temp = bf.readLine();
 //1,2,3,4 4개로 쪼개고 싶으면 new StringTokenizer(temp, ","); 로하면 자를 준비 완료.
 StringTokenizer st = new StringTokenizer(temp); // new StringTokenizer(temp, " ") 와 같다
-for(st.hasMoreTokens) {
+while(st.hasMoreTokens) {
 	int a = Integer.parseInt(st.nextToken());
 	int b = Integer.parseInt(st.nextToken());
 }
