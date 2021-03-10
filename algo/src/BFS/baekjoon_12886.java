@@ -50,9 +50,7 @@ public class baekjoon_12886 {
 			}
 			return;
 		}
-		
-		// bw.write(rocks[0] + " " + rocks[1] + " " + rocks[2] + "\n");
-		
+				
 		// 왼쪽 2개비교
 		// 왼쪽이 더 클때
 		if(rocks[0] > rocks[1]) {
